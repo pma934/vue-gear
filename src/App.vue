@@ -58,7 +58,8 @@
         &copy; 2017
         <router-link to="/about">about</router-link>|
         <router-link to="/elementtable">elementtable</router-link>|
-        <router-link to="/sass">SassDemo</router-link>
+        <router-link to="/sass">SassDemo</router-link>|
+        <router-link to="/poke">PokeApi</router-link>
       </span>
     </v-footer>
   </v-app>

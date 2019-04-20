@@ -33,6 +33,11 @@ export default new Router({
       path: '/sass',
       name: 'sass',
       component: () => import('./views/SassTest.vue')
+    },
+    {
+      path: '/poke',
+      name: 'poke',
+      component: () => import('./views/PokeApiDemo.vue')
     }
   ]
 })
