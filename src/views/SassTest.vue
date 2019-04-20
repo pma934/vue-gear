@@ -57,7 +57,7 @@ $bb: 100px;
 }
 
 .box {
-  @import "../assets/a.css";
+  @import "../assets/SassTest/a.css";
   //群组选择器的嵌套;  父选择器的标识符&;
   /* 非静默注释 */
   //静默注释
@@ -119,7 +119,7 @@ $bb: 100px;
 }
 
 .xxd {
-  @import "../assets/a";
+  @import "../assets/SassTest/a";
   @include test;
   a {
     @include link-colors(blue, red, green);

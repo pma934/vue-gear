@@ -1,0 +1,27 @@
+$colors: (水 : #3399FF,
+火 : #FF4422,
+草 : #77CC55,
+冰 : #77DDFF,
+电 : #FFCC33,
+毒 : #AA5599,
+虫 : #AABB22,
+钢 : #AAAABB,
+龙 : #7766EE,
+惡 : #775544,
+一般 : #BBBBAA,
+格斗 : #BB5544,
+岩石 : #BBAA66,
+飞行 : #CAD0F7,
+地面 : #DDBB55,
+妖精 : #FFAAFF,
+幽灵 : #6666BB,
+超能力 : #FF5599,
+);
+
+@each $type1 in 水,火,草,冰,电,毒,虫,钢,龙,惡,一般,格斗,岩石,飞行,地面,妖精,幽灵,超能力 {
+    @each $type2 in 水,火,草,冰,电,毒,虫,钢,龙,惡,一般,格斗,岩石,飞行,地面,妖精,幽灵,超能力 {
+        .type-#{$type1}-#{$type2} {
+            background-image: linear-gradient(90deg, map-get($colors, $type1), map-get($colors, $type2));
+        }
+    }
+}

@@ -1,6 +1,12 @@
 <template>
-  <div>
-    <p v-text="str"></p>
+  <div class="context">
+    <div v-for="data in datas" :key="data.name" class="iconbox">
+      <div :class="[data.副属性?'type-'+data.主属性+'-'+data.副属性:'type-'+data.主属性+'-'+data.主属性]">
+        <span>#{{data.全国编号}}</span>
+        <span>{{data.中文名}}</span>
+        <span :class="['sprite-icon','sprite-icon-'+data.全国编号]"></span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -13,25 +19,45 @@ export default {
   data() {
     return {
       P: new Pokedex(),
-      str: "nothing"
+      datas: require("@/assets/Pokemon/Kanto.json")
     };
   },
   computed: {},
-  watch: {},
   methods: {},
   components: {},
   created() {},
   mounted() {
-    this.P.getPokemonsList()
-      .then(function(response) {
-        console.log(response);
-      })
-      .catch(function(error) {
-        console.error("There was an ERROR: ", error);
-      });
+    console.log(this.datas);
   }
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../assets/Pokemon/PokemonIcon.css";
+@import "../assets/Pokemon/TypeColor";
+.context {
+  margin: 10px 20px;
+  .iconbox {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    display: inline-block;
+    &:hover {
+      transform: scale(1.05);
+    }
+    div {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      span {
+        &:first-child {
+          font-style: italic;
+        }
+        font-weight: bolder;
+        text-align: center;
+        margin: auto;
+      }
+    }
+  }
+}
 </style>
