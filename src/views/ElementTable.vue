@@ -116,6 +116,7 @@
       }
     },
     mounted() {
+      console.log(this.Global.a++)
       console.log(this.$Mock.Random.datetime('y-MM-dd HH:mm:ss'))
     },
     updated() {

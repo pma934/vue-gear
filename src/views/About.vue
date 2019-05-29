@@ -31,7 +31,9 @@ export default {
     }
   },
   components: {},
-  created() {},
+  created() {
+    console.log(this.Global.a++)
+  },
   mounted() {}
 };
 </script>
