@@ -2,40 +2,54 @@
     "id": "前端技能",
     "children": [
         {
-            "id": "html、css、js",
-            "children":[
+            "id": "html,css,js",
+            "children": [
                 {
-                    "id":"html5",
-                    "value":5
+                    "id": "html5",
+                    "value": 5,
+                    "url": "https://cdn.jsdelivr.net/gh/pma934/myCDN@1.0.4/ico/HTML5.svg",
+                    "click": "https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/HTML5"
                 },
                 {
-                    "id":"css3",
-                    "value":5
+                    "id": "css3",
+                    "value": 5,
+                    "url": "https://cdn.jsdelivr.net/gh/pma934/myCDN@1.0.4/ico/CSS3.svg",
+                    "click": "https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS3"
                 },
                 {
-                    "id":"ES6",
-                    "value":5
+                    "id": "ES6",
+                    "value": 4,
+                    "url":"",
+                    "click":"http://es6.ruanyifeng.com/#docs/promise"
                 },
                 {
-                    "id":"jquery",
-                    "value":1
+                    "id": "jquery",
+                    "value": 5,
+                    "url": "https://cdn.jsdelivr.net/gh/pma934/myCDN@1.0.4/ico/jQuery.svg",
+                    "click": "https://jquery.com/"
                 }
             ]
         },
         {
             "id": "前端框架",
-            "children":[
+            "children": [
                 {
-                    "id":"vue",
-                    "value":5
+                    "id": "vue",
+                    "value": 5,
+                    "url": "https://cdn.jsdelivr.net/gh/pma934/myCDN@1.0.4/ico/Vue.svg",
+                    "click": ""
                 },
                 {
-                    "id":"react",
-                    "value":5
+                    "id": "react",
+                    "value": 2,
+                    "url": "https://cdn.jsdelivr.net/gh/pma934/myCDN@1.0.4/ico/React.svg",
+                    "click": ""
                 },
                 {
-                    "id":"Angular",
-                    "value":5
+                    "id": "Angular",
+                    "value": 1,
+                    "url": "https://cdn.jsdelivr.net/gh/pma934/myCDN@1.0.4/ico/Angular.svg",
+                    "click": ""
                 }
             ]
         },
@@ -43,12 +57,16 @@
             "id": "css预处理器",
             "children": [
                 {
-                    "id": "Sass/Scss",
-                    "value":5
+                    "id": "Sass",
+                    "value": 3,
+                    "url": "https://cdn.jsdelivr.net/gh/pma934/myCDN@1.0.4/ico/Sass.svg",
+                    "click": ""
                 },
                 {
                     "id": "Less",
-                    "value":5
+                    "value": 2,
+                    "url": "https://cdn.jsdelivr.net/gh/pma934/myCDN@1.0.4/ico/less.svg",
+                    "click": ""
                 }
             ]
         },
@@ -57,7 +75,9 @@
             "children": [
                 {
                     "id": "koa",
-                    "value":5
+                    "value": 3,
+                    "url": "",
+                    "click": ""
                 }
             ]
         },
@@ -66,7 +86,9 @@
             "children": [
                 {
                     "id": "Electron",
-                    "value":5
+                    "value": 4,
+                    "url": "https://cdn.jsdelivr.net/gh/pma934/myCDN@1.0.4/ico/Electron.ico",
+                    "click": ""
                 }
             ]
         },
@@ -75,7 +97,9 @@
             "children": [
                 {
                     "id": "flutter",
-                    "value":5
+                    "value": 4,
+                    "url": "https://cdn.jsdelivr.net/gh/pma934/myCDN@1.0.4/ico/Flutter.png",
+                    "click": ""
                 }
             ]
         }

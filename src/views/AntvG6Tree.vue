@@ -38,22 +38,32 @@ export default {
       height: 500,
       linkCenter: true,
       modes: {
-        default: ["drag-node", "setRunning","click-select","tooltip"]
+        default: [
+          "drag-node",
+          "setRunning",
+          {
+            type: "tooltip",
+            formatText(model) {
+              let lv = ["不懂", "了解", "熟悉", "熟练", "掌握", "精通"];
+              return model.value?`${model.id}\t${lv[model.value]}`:`${model.id}`;
+            }
+          }
+        ]
       },
       defaultNode: {
-        shape: "myimage",
-        size:5,
-        img:require('@/assets/thunderbolt.png')
+        shape: "background-animate",
+        color: "#40a9ff",
+        size: 5
       },
       nodeStyle: {
         default: {
+          lineWidth: 0
         },
         running: {
           fillOpacity: 0.5
         }
       },
       defaultEdge: {
-        shape: "can-running",
         size: 0.5
       },
       edgeStyle: {
@@ -83,10 +93,10 @@ export default {
   padding: 10px 6px;
   color: blue;
   background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid #e2e2e2;
+  /* border: 1px solid #e2e2e2; */
   border-radius: 4px;
 }
-#mountNode {
+/* #mountNode >>> canvas {
   background-color: #eee;
-}
+} */
 </style>
