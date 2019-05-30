@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import G6 from '@antv/g6'
+import Hierarchy from "@antv/hierarchy";
 import AntvG6Init from "@/assets/AntvG6Init.js";
 
 export default {
@@ -32,15 +34,15 @@ export default {
       this.maxX = Math.max(this.maxX, x);
       this.maxY = Math.max(this.maxY, y);
       let y1 = y;
-      if (obj.hasOwnProperty("child")) {
-        for (let index in obj.child) {
-          y1 = this.getmap(obj.child[index], x + 500, y1);
-          if (index < obj.child.length - 1) {
+      if (obj.hasOwnProperty("children")) {
+        for (let index in obj.children) {
+          y1 = this.getmap(obj.children[index], x + 500, y1);
+          if (index < obj.children.length - 1) {
             y1 += 50;
           }
           this.graphdata.edges.push({
             source: obj.id,
-            target: obj.child[index].id
+            target: obj.children[index].id
           });
         }
       }
@@ -53,7 +55,7 @@ export default {
     },
     delet() {
       console.log(this.graph);
-      // this.graph.changeSize()
+      this.graph.destroy()
     }
   },
   components: {},
@@ -63,9 +65,9 @@ export default {
   mounted() {
     var that = this;
 
-    AntvG6Init(this.$G6);
+    AntvG6Init(G6);
 
-    this.graph = new this.$G6.Graph({
+    this.graph = new G6.Graph({
       container: "mountNode",
       width: this.maxX,
       height: this.maxY,
@@ -123,5 +125,8 @@ export default {
   background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid #e2e2e2;
   border-radius: 4px;
+}
+#mountNode{
+  background-color:#eee
 }
 </style>

@@ -42,6 +42,11 @@ export default new Router({
       component: () => import('./views/AntvG6.vue')
     },
     {
+      path: '/tree',
+      name: 'tree',
+      component: () => import('./views/AntvG6Tree.vue')
+    },
+    {
       path: '/readExcel',
       name: 'readExcel',
       component: () => import('./views/ReadExcel.vue')

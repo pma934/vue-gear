@@ -1,48 +1,81 @@
 {
-    "id": "课程",
-    "child": [
+    "id": "前端技能",
+    "children": [
         {
-            "id": "数学"
-        },
-        {
-            "id": "语文"
-        },
-        {
-            "id": "英语"
-        },
-        {
-            "id": "理科",
-            "child": [
+            "id": "html、css、js",
+            "children":[
                 {
-                    "id": "物理"
+                    "id":"html5",
+                    "value":5
                 },
                 {
-                    "id": "化学"
+                    "id":"css3",
+                    "value":5
                 },
                 {
-                    "id": "生物"
+                    "id":"ES6",
+                    "value":5
+                },
+                {
+                    "id":"jquery",
+                    "value":1
                 }
             ]
         },
         {
-            "id": "文科",
-            "child": [
+            "id": "前端框架",
+            "children":[
                 {
-                    "id": "政治"
+                    "id":"vue",
+                    "value":5
                 },
                 {
-                    "id": "历史"
+                    "id":"react",
+                    "value":5
                 },
                 {
-                    "id": "地理"
+                    "id":"Angular",
+                    "value":5
                 }
             ]
         },
         {
-            "id": "其他",
-            "child": [
+            "id": "css预处理器",
+            "children": [
                 {
-                    "id": "体育"
+                    "id": "Sass/Scss",
+                    "value":5
+                },
+                {
+                    "id": "Less",
+                    "value":5
+                }
+            ]
+        },
+        {
+            "id": "nodejs后台",
+            "children": [
+                {
+                    "id": "koa",
+                    "value":5
+                }
+            ]
+        },
+        {
+            "id": "桌面端",
+            "children": [
+                {
+                    "id": "Electron",
+                    "value":5
+                }
+            ]
+        },
+        {
+            "id": "app",
+            "children": [
+                {
+                    "id": "flutter",
+                    "value":5
                 }
             ]
         }
