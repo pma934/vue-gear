@@ -13,6 +13,7 @@ function readExcel(e) { //表格导入
 
         const fileReader = new FileReader();
         fileReader.onload = (ev) => {
+            console.log(ev,ev.target)
             try {
                 const data = ev.target.result;
                 const workbook = XLSX.read(data, {

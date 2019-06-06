@@ -6,12 +6,14 @@
         <input type="file" ref="upload" accept=".xls, .xlsx" class="outputlist_upload">
       </div>
       <code>{{outputs}}</code>
+      <MyTable :table-data="outputs"></MyTable>
     </div>
   </div>
 </template>
 
 <script>
 import readExcel from "@/assets/readExcel.js";
+import MyTable from "@/components/MyTable.vue";
 
 export default {
   name: "ReadExcel",
@@ -24,11 +26,14 @@ export default {
   computed: {},
   watch: {},
   methods: {},
-  components: {},
+  components: {
+    MyTable: MyTable
+  },
   created() {},
   mounted() {
     let that = this;
     this.$refs.upload.addEventListener("change", async e => {
+      console.log(e, e.target);
       readExcel(e).then(
         res => {
           that.outputs = res;

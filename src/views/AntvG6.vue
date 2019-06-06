@@ -16,7 +16,7 @@ export default {
   props: {},
   data() {
     return {
-      data: require("@/assets/hhh.json"),
+      data: require("@/assets/skill.json"),
       maxX: 100,
       maxY: 100,
       graphdata: {

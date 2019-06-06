@@ -16,7 +16,7 @@ export default {
   props: {},
   data() {
     return {
-      data: require("@/assets/hhh.json"),
+      data: require("@/assets/skill.json"),
       graph: null
     };
   },
