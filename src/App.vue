@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app >
     <v-navigation-drawer
       persistent
       :mini-variant="miniVariant"
@@ -62,7 +62,8 @@
         <router-link to="/poke">PokeApi</router-link>|
         <router-link to="/antv">AntvG6</router-link>|
         <router-link to="/tree">AntvG6Tree</router-link>|
-        <router-link to="/readExcel">ReadExcel</router-link>
+        <router-link to="/readExcel">ReadExcel</router-link>|
+        <router-link to="/codePen">CodePen</router-link>
       </span>
     </v-footer>
   </v-app>

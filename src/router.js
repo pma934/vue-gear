@@ -7,8 +7,7 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'home',
       component: Home
@@ -16,7 +15,7 @@ export default new Router({
     {
       path: '/elementtable',
       name: 'elementtable',
-      component: () => import(/* webpackChunkName: "about" */ './views/ElementTable.vue')
+      component: () => import( /* webpackChunkName: "about" */ './views/ElementTable.vue')
     },
     {
       path: '/about',
@@ -24,7 +23,7 @@ export default new Router({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: () => import( /* webpackChunkName: "about" */ './views/About.vue')
     },
     {
       path: '/sass',
@@ -50,6 +49,11 @@ export default new Router({
       path: '/readExcel',
       name: 'readExcel',
       component: () => import('./views/ReadExcel.vue')
+    },
+    {
+      path: '/codePen',
+      name: 'codePen',
+      component: () => import('./views/CodePen.vue')
     }
   ]
 })
