@@ -3,19 +3,26 @@
     <v-container grid-list-lg>
       <v-layout wrap>
         <v-flex v-for="(codePenItem,index) in codePenItems" :key="index" xs12 sm6 md4 lg3>
-          <v-card hover>
+          <v-card hover class="nopointer">
             <v-card-title class="title">
               <span
                 style="text-overflow: ellipsis ;white-space: nowrap;overflow: hidden;"
               >{{codePenItem.title}}</span>
             </v-card-title>
-            <v-img :src="codePenItem.url" :lazy-src="codePenItem.lazy" aspect-ratio="1.8" class="grey lighten-2">
-              <template v-slot:placeholder>
-                <v-layout fill-height align-center justify-center ma-0>
-                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                </v-layout>
-              </template>
-            </v-img>
+            <a :href="codePenItem.full" target="_blank">
+              <v-img
+                :src="codePenItem.url"
+                :lazy-src="codePenItem.lazy"
+                aspect-ratio="1.8"
+                class="grey lighten-2 v-img-box"
+              >
+                <template v-slot:placeholder>
+                  <v-layout fill-height align-center justify-center ma-0>
+                    <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                  </v-layout>
+                </template>
+              </v-img>
+            </a>
             <v-card-actions>
               <v-btn flat small color="orange" :href="codePenItem.full" target="_blank">FULL</v-btn>
               <v-btn flat small color="orange" :href="codePenItem.pen" target="_blank">PEN</v-btn>
@@ -24,42 +31,6 @@
         </v-flex>
       </v-layout>
     </v-container>
-      <v-layout>
-    <v-flex xs12 sm6 offset-sm3>
-      <v-card>
-        <v-container grid-list-sm fluid>
-          <v-layout row wrap>
-            <v-flex
-              v-for="n in 9"
-              :key="n"
-              xs4
-              d-flex
-            >
-              <v-card flat tile class="d-flex">
-                <v-img
-                  :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-                  :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
-                  aspect-ratio="1"
-                  class="grey lighten-2"
-                >
-                  <template v-slot:placeholder>
-                    <v-layout
-                      fill-height
-                      align-center
-                      justify-center
-                      ma-0
-                    >
-                      <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                    </v-layout>
-                  </template>
-                </v-img>
-              </v-card>
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </v-card>
-    </v-flex>
-  </v-layout>
   </div>
 </template>
 
@@ -143,11 +114,11 @@ export default {
 </script>
 
 <style scoped>
-/* * >>> .v-responsive.v-image:hover .v-image__image.v-image__image--cover {
+.nopointer:hover {
+  cursor: inherit;
+}
+* >>> .v-responsive.v-image:hover .v-image__image.v-image__image--cover {
   transform: scale(1.1);
   transition: all 0.6s;
 }
-* >>> .v-card.v-card--hover.theme--light:hover {
-  cursor: inherit;
-} */
 </style>
