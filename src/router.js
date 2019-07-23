@@ -54,6 +54,11 @@ export default new Router({
       path: '/codePen',
       name: 'codePen',
       component: () => import('./views/CodePen.vue')
+    },
+    {
+      path: '/RotateCardTest',
+      name: '旋转卡片测试',
+      component: () => import('./views/RotateCardTest.vue')
     }
   ]
 })

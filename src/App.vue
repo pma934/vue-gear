@@ -63,15 +63,16 @@
         <router-link to="/antv">AntvG6</router-link>|
         <router-link to="/tree">AntvG6Tree</router-link>|
         <router-link to="/readExcel">ReadExcel</router-link>|
-        <router-link to="/codePen">CodePen</router-link>
+        <router-link to="/codePen">CodePen</router-link>|
+        <router-link to="/RotateCardTest">RotateCardTest</router-link>
       </span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
-import TranslateForm from "./views/TranslateForm";
-import TranslateOutput from "./views/TranslateOutput";
+import TranslateForm from "./components/TranslateForm";
+import TranslateOutput from "./components/TranslateOutput";
 import $ from "jquery";
 import md5 from "blueimp-md5";
 
