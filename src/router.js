@@ -59,6 +59,11 @@ export default new Router({
       path: '/RotateCardTest',
       name: '旋转卡片测试',
       component: () => import('./views/RotateCardTest.vue')
+    },
+    {
+      path: '/ThreeTest',
+      name: 'THREE测试',
+      component: () => import('./views/ThreeTest.vue')
     }
   ]
 })

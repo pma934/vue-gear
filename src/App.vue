@@ -64,7 +64,8 @@
         <router-link to="/tree">AntvG6Tree</router-link>|
         <router-link to="/readExcel">ReadExcel</router-link>|
         <router-link to="/codePen">CodePen</router-link>|
-        <router-link to="/RotateCardTest">RotateCardTest</router-link>
+        <router-link to="/RotateCardTest">RotateCardTest</router-link>|
+        <router-link to="/ThreeTest">ThreeTest</router-link>|
       </span>
     </v-footer>
   </v-app>
@@ -78,6 +79,9 @@ import md5 from "blueimp-md5";
 
 export default {
   name: "App",
+  mounted(){
+    // console.log('aaa')
+  },
   data() {
     return {
       clipped: false,
