@@ -10,7 +10,7 @@
   "dependencies": {
     "@antv/g6": "^3.0.4",
     "ajv": "^5.0.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "blueimp-md5": "^2.10.0",
     "element-ui": "^2.6.1",
     "gsap": "^3.0.1",
